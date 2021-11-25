@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.SignUpView">
+   <children>
+      <StackPane fx:id="general_stackpane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="300.0" styleClass="default-color" stylesheets="@../../style.css" />
+                  <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="900.0" HBox.hgrow="ALWAYS">
+                     <top>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="200.0" styleClass="default-color" stylesheets="@../../style.css">
+                           <children>
+                              <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Create New Account" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" iconName="USER_PLUS" selectionEnd="0" selectionStart="0" size="2em" />
+                                 </graphic>
+                              </Label>
+                              <JFXButton fx:id="back_to_sign_in_page_button" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#OnBackToSignInButtonAction" prefHeight="60.0" prefWidth="155.0" ripplerFill="WHITE" text="Back to Sign In" textAlignment="RIGHT" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphStyleClass="" iconName="ANGLE_LEFT" size="2em" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="7.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                       <children>
+                                          <StackPane alignment="BOTTOM_CENTER" maxHeight="1.7976931348623157E308" AnchorPane.bottomAnchor="-60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <JFXMasonryPane HSpacing="20.0" VSpacing="40.0" cellHeight="40.0" cellWidth="350.0" limitColumn="2" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="350.0" prefHeight="2175.0" prefWidth="800.0" style="-: blue;" StackPane.alignment="CENTER">
+                                                   <children>
+                                                      <StackPane maxWidth="1.7976931348623157E308">
+                                                         <children>
+                                                            <JFXTextField fx:id="first_name_field" focusColor="#ff5733" labelFloat="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="1" promptText="First name">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane maxWidth="-Infinity">
+                                                         <children>
+                                                            <JFXTextField fx:id="last_name_field" focusColor="#ff5733" labelFloat="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="1" promptText="Last name">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="30.0" layoutY="30.0">
+                                                         <children>
+                                                            <JFXTextField fx:id="username_field" focusColor="#ff5733" labelFloat="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="1" promptText="Username">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="420.0" layoutY="30.0" maxWidth="-Infinity">
+                                                         <children>
+                                                            <JFXTextField fx:id="email_field" focusColor="#ff5733" labelFloat="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="1" promptText="Email">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="30.0" layoutY="90.0">
+                                                         <children>
+                                                            <JFXPasswordField fx:id="password_field" focusColor="#ff5733" labelFloat="true" promptText="Password">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXPasswordField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="420.0" layoutY="90.0" maxWidth="-Infinity">
+                                                         <children>
+                                                            <JFXPasswordField fx:id="confirm_password_field" focusColor="#ff5733" labelFloat="true" promptText="confirm password">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXPasswordField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="420.0" layoutY="150.0" maxWidth="-Infinity">
+                                                         <children>
+                                                            <JFXDatePicker fx:id="birthday_field" defaultColor="#ff5733" maxWidth="1.7976931348623157E308" promptText="Birthday" StackPane.alignment="CENTER" />
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="30.0" layoutY="210.0" maxWidth="-Infinity">
+                                                         <children>
+                                                            <JFXTextField fx:id="phone_number_field" focusColor="#ff5733" labelFloat="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="1" promptText="Phone Number">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane layoutX="420.0" layoutY="210.0">
+                                                         <children>
+                                                            <JFXTextArea fx:id="bio_field" focusColor="#ff5733" labelFloat="true" prefColumnCount="1" prefRowCount="2" promptText="Bio">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </JFXTextArea>
+                                                         </children>
+                                                      </StackPane>
+                                                      <StackPane>
+                                                         <children>
+                                                            <JFXButton fx:id="yes_button1" onAction="#OnYesButtonAction" prefHeight="70.0" prefWidth="300.0" stylesheets="@../../style.css" text="Sign up" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="rounded_button" />
+                                                                  <String fx:value="green" />
+                                                               </styleClass>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                   </padding>
+                                                   <StackPane.margin>
+                                                      <Insets />
+                                                   </StackPane.margin>
+                                                </JFXMasonryPane>
+                                             </children>
+                                          </StackPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

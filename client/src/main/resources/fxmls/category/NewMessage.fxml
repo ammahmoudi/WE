@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="298.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.category.NewMessageView">
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <JFXButton fx:id="send_button" alignment="CENTER_RIGHT" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" onAction="#OnSendButtonAction" ripplerFill="ORANGE" style="-fx-background-color: #0cad48;" text="Send" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fx:id="send_icon" fill="WHITE" glyphStyleClass="" iconName="SEND" size="1.4em" />
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXButton>
+         </children>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="136.0" layoutY="-25.0" prefHeight="50.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="660.0" text="New Message">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="close_button" alignment="CENTER" cache="true" cancelButton="true" contentDisplay="GRAPHIC_ONLY" onAction="#OnCloseButtonAction" prefHeight="50.0" prefWidth="68.0" text="Add Photo" textAlignment="RIGHT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOSE" size="2.5em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <HBox alignment="CENTER" fillHeight="false" prefHeight="30.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextArea fx:id="send_message_text" focusColor="ORANGE" onKeyPressed="#onMessageTextKeyPressed" prefColumnCount="30" prefWidth="500.0" promptText="Write a Message.." wrapText="true" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="image_button" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#OnImageButtonAction" prefHeight="146.0" prefWidth="91.0" ripplerFill="ORANGE" styleClass="default-button" stylesheets="@../../style.css" text="Add Photo" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIcon fx:id="image_icon" fill="WHITE" glyphStyleClass="" iconName="IMAGE" size="2.2em" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

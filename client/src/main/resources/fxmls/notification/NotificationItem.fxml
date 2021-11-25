@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.NotificationItemView">
+   <children>
+      <JFXButton fx:id="notification_button" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" onAction="#OnNotificationButtonAction" prefHeight="80.0" prefWidth="700.0" HBox.hgrow="ALWAYS">
+         <graphic>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="80.0" prefWidth="80.0">
+                           <padding>
+                              <Insets left="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Circle fx:id="avatar_circle" fill="DODGERBLUE" onMouseClicked="#OnAvatarCircleClicked" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="80.0" prefWidth="605.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label fx:id="text_label" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="creation_date_label" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="232094304b novebm 2" textFill="#4d4c4c">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </JFXButton>
+      <VBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#OnUserClicked" prefHeight="80.0" prefWidth="0.0" spacing="5.0" style="-fx-background-color: white;" HBox.hgrow="ALWAYS">
+         <children>
+            <JFXButton fx:id="close_button" alignment="CENTER" cache="true" cancelButton="true" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" onAction="#OnCloseButtonAction" prefHeight="30.0" prefWidth="27.0" text="Add Photo" textAlignment="RIGHT" textFill="WHITE" visible="false">
+               <graphic>
+                  <FontAwesomeIcon iconName="CLOSE" size="2em" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <InnerShadow choke="0.38" color="#ee6300" radius="11.4825" width="26.93" />
+   </effect>
+</HBox>

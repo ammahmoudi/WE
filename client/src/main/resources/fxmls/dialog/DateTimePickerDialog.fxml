@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="400.0" maxWidth="1.7976931348623157E308" minWidth="250.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.dialog.DateTimePickerView">
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="yes_button" alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#OnYesButtonAction" prefHeight="47.0" stylesheets="@../../style.css" text="Apply" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="green" />
+                  <String fx:value="unrounded" />
+               </styleClass>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="136.0" layoutY="-25.0" prefHeight="50.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="title_label" maxWidth="1.7976931348623157E308" prefHeight="50.0" text="Pick a time" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton fx:id="close_button" alignment="CENTER" cache="true" cancelButton="true" contentDisplay="GRAPHIC_ONLY" onAction="#OnCloseButtonAction" prefHeight="50.0" prefWidth="68.0" text="Add Photo" textAlignment="RIGHT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOSE" size="2.5em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXDatePicker fx:id="date_picker" defaultColor="#dd571a" editable="false" maxWidth="1.7976931348623157E308" overLay="true" promptText="Date">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></JFXDatePicker>
+            <JFXTimePicker fx:id="time_picker" defaultColor="#dd571a" maxWidth="1.7976931348623157E308" promptText="Time">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </JFXTimePicker>
+
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

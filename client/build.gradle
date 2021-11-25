@@ -1,0 +1,77 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+javafx {
+    version = "15.0.1"
+    modules = [ 'javafx.controls','javafx.fxml','javafx.swing' ]
+}
+
+mainClassName = 'MainApp'
+group 'com.amg'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
+// https://mvnrepository.com/artifact/com.h2database/h2
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+
+
+// https://mvnrepository.com/artifact/org.cfg4j/cfg4j
+
+    // https://mvnrepository.com/artifact/org.cfg4j/cfg4j-core
+    implementation 'org.cfg4j:cfg4j-core:4.4.1'
+
+    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.14.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.1'
+    implementation group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.4.30.Final'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    implementation 'com.jfoenix:jfoenix:9.0.10'
+ //   implementation 'io.github.palexdev:materialfx:11.12.0'
+
+   // implementation 'org.jfxtras:jmetro:11.6.14'
+    //mplementation ('eu.hansolo:tilesfx:11.48') {
+  //      exclude group: 'org.openjfx'
+ //   }
+    // https://mvnrepository.com/artifact/de.jensd/fontawesomefx-fontawesome
+    implementation group: 'de.jensd', name: 'fontawesomefx-fontawesome', version: '4.7.0-9.1.2'
+    implementation files('libs/fontawesomefx-8.1.jar')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.12.4'
+    implementation files('../shared/build/classes/java/main')
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-hibernate5
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:2.12.4'
+
+// https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.4'
+    implementation 'com.github.kevinsawicki:timeago:1.0.1'
+
+
+
+
+
+}
+
+run {
+    jvmArgs = [
+            "--add-exports=javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED",
+            "--add-exports=javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED",
+            "--add-exports=javafx.base/com.sun.javafx.binding=ALL-UNNAMED",
+            "--add-exports=javafx.base/com.sun.javafx.event=ALL-UNNAMED",
+            "--add-exports=javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED",
+            "--add-exports=javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED",
+
+
+
+                  "-Xms256m",
+
+                    "-Xmx1024m"
+
+    ]
+}

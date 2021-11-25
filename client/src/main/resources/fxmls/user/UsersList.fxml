@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.user.UsersListView">
+   <children>
+      <ScrollPane fx:id="scrollpane" fitToWidth="true" hbarPolicy="NEVER" maxWidth="1.7976931348623157E308" minHeight="400.0" prefHeight="500.0" StackPane.alignment="CENTER">
+         <content>
+            <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="200.0">
+               <children>
+                  <VBox fx:id="users_VBox" layoutX="190.0" maxHeight="1.7976931348623157E308" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

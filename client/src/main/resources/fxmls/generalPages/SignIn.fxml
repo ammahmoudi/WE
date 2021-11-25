@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.SignInView">
+   <children>
+      <StackPane fx:id="stackpane" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1000.0">
+               <children>
+                  <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="400.0" styleClass="default-color" stylesheets="@../../style.css" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="309.0" fitWidth="309.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../logo.png" />
+                           </image>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="600.0" prefWidth="500.0" prefWrapLength="1000.0" vgap="35.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="WELCOME" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <FlowPane.margin>
+                              <Insets top="20.0" />
+                           </FlowPane.margin>
+                        </Label>
+                        <JFXTextField fx:id="username_field" focusColor="#ff5733" labelFloat="true" onKeyPressed="#onTextKeyPressed" promptText="username" styleClass="jfx-text-field_colored" stylesheets="@../../style.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="password_field" focusColor="#ff5733" labelFloat="true" onKeyPressed="#onTextKeyPressed" promptText="password" styleClass="jfx-password-field_colored" stylesheets="@../../style.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="signIn_button" alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" layoutY="361.0" onAction="#onSignInButtonAction" prefHeight="49.0" prefWidth="109.0" ripplerFill="WHITE" stylesheets="@../../style.css" text="Sign In" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Blend>
+                                 <topInput>
+                                    <Blend />
+                                 </topInput>
+                              </Blend>
+                           </effect>
+                           <styleClass>
+                              <String fx:value="default-color" />
+                              <String fx:value="rounded_button" />
+                           </styleClass>
+                        </JFXButton>
+                        <JFXButton fx:id="sign_up_page_button" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" onAction="#onSignUpPageAction" prefHeight="25.0" prefWidth="165.0" ripplerFill="#ff5733" styleClass="colored-text" stylesheets="@../../style.css" text="Create a new Account" textAlignment="CENTER" textFill="#ff5733" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <Blend>
+                                 <topInput>
+                                    <Blend />
+                                 </topInput>
+                              </Blend>
+                           </effect>
+                        </JFXButton>
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </FlowPane>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

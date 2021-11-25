@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane centerShape="false" depthTest="ENABLE" nodeOrientation="LEFT_TO_RIGHT" prefWidth="350.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.post.PostItemView">
+   <top>
+      <HBox fx:id="user_info_bar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="60.0" prefWidth="60.0">
+               <children>
+                  <Circle fx:id="avatar_circle" fill="DODGERBLUE" onMouseClicked="#OnAvatarCircleClicked" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+               <padding>
+                  <Insets left="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <VBox fx:id="user_detail_vbox" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="user_real_name_label" onMouseClicked="#OnUserInfoBarClicked" text="name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="username_label" onMouseClicked="#OnUserInfoBarClicked" text="username">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon cache="true" cacheHint="SPEED" iconName="AT" selectionEnd="0" />
+                     </graphic>
+                  </Label>
+                  <JFXButton fx:id="reposted_button" graphicTextGap="5.0" onAction="#OnRepostedButtonAction" ripplerFill="ORANGE" text="Reposted From Erfan">
+                     <graphic>
+                        <FontAwesomeIcon cache="true" iconName="RETWEET" />
+                     </graphic>
+                     <padding>
+                        <Insets left="-1.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <JFXButton fx:id="edit_button" accessibleHelp="like" accessibleText="like" buttonType="RAISED" cache="true" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#OnEditButtonAction" prefHeight="40.0" prefWidth="40.0" ripplerFill="ORANGE" visible="false">
+               <graphic>
+                  <FontAwesomeIcon cache="true" glyphStyleClass="" iconName="EDIT" selectionEnd="0" selectionFill="#cf0e0e" size="2em" stroke="BLACK" strokeWidth="0.0" />
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="5.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox alignment="BOTTOM_CENTER" prefHeight="70.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="700.0">
+               <children>
+                  <JFXButton fx:id="like_button" accessibleHelp="like" accessibleText="like" buttonType="RAISED" cache="true" contentDisplay="GRAPHIC_ONLY" onAction="#OnLikeButtonAction" prefHeight="40.0" prefWidth="40.0" ripplerFill="ORANGE">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="like_button_icon" cache="true" fill="#ffffff00" glyphStyleClass="" iconName="HEART" selectionFill="#cf0e0e" size="1.7em" stroke="BLACK" strokeWidth="2.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="comment_button" accessibleHelp="comment" accessibleText="comment" buttonType="RAISED" cache="true" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" onAction="#OnCommentButtonAction" prefHeight="40.0" prefWidth="40.0">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="comment_button_icon" cache="true" fill="#ffffff00" iconName="COMMENT" selectionEnd="0" size="1.7em" stroke="BLACK" strokeWidth="2.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="share_button" accessibleHelp="share" accessibleText="share" buttonType="RAISED" cache="true" contentDisplay="GRAPHIC_ONLY" layoutX="50.0" layoutY="10.0" onAction="#OnShareButtonAction" prefHeight="40.0" prefWidth="40.0">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="share_button_icon" accessibleHelp="share" accessibleText="share" cache="true" fill="#ffffff00" iconName="SHARE" selectionEnd="0" size="1.7em" stroke="BLACK" strokeWidth="2.0" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="repost_button" accessibleHelp="repost" accessibleText="repost" buttonType="RAISED" cache="true" contentDisplay="GRAPHIC_ONLY" layoutX="90.0" layoutY="10.0" onAction="#OnRepostButtonAction" prefHeight="40.0" prefWidth="40.0">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="repost_button_icon" accessibleHelp="share" accessibleText="share" cache="true" fill="#ffffff00" iconName="RETWEET" selectionEnd="0" size="1.7em" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" />
+                     </graphic>
+                  </JFXButton>
+                  <AnchorPane prefHeight="40.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <JFXButton fx:id="report_button" accessibleHelp="repost" accessibleText="repost" buttonType="RAISED" cache="true" contentDisplay="GRAPHIC_ONLY" onAction="#OnReportButtonAction" prefHeight="40.0" prefWidth="40.0" textAlignment="RIGHT">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="report_button_icon" accessibleHelp="report" accessibleText="report" cache="true" fill="#ffffff00" iconName="BUG" selectionEnd="0" selectionStart="0" size="1.7em" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="all_likes_button" buttonType="RAISED" onAction="#OnAllLikesButtonAction" prefHeight="30.0" prefWidth="85.0" styleClass="all_likes_button" stylesheets="@../../style.css" text="238 Likes" textFill="#393939" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="all_comment_button" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#OnAllCommentsButtonAction" prefHeight="30.0" prefWidth="133.0" styleClass="all_comments_button" stylesheets="@../../style.css" text="5676 Comments" textFill="GREY" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="post_creation_date_label" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="21.0" prefWidth="100.0" text="27 november 2020" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </bottom>
+   <center>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="post_image_anchor" minHeight="-Infinity">
+               <children>
+                  <ImageView fx:id="post_image" cache="true" fitHeight="210.0" fitWidth="350.4" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../post.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="120.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="post_text_label" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="400.0" text="kkkk" textOverrun="CLIP" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+   <effect>
+      <DropShadow />
+   </effect>
+</BorderPane>

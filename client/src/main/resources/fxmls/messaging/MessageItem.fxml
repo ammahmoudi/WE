@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="message_stackpane" alignment="BOTTOM_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.messaging.MessageItemView">
+   <children>
+      <HBox fx:id="message_hbox" onMouseEntered="#OnMessageHBoxMouseEntered" onMouseExited="#OnMessageHBoxMouseExited">
+         <children>
+            <StackPane alignment="BOTTOM_LEFT" prefWidth="60.0">
+               <children>
+                  <Circle fx:id="avatar_circle" cache="true" fill="DODGERBLUE" onMouseClicked="#OnAvatarCircleClicked" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+               </children>
+            </StackPane>
+            <VBox fx:id="message_vbox" maxWidth="420.0" scaleShape="false" style="-fx-background-radius: 10px; -fx-background-color: white;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" spacing="15.0">
+                     <children>
+                        <Label fx:id="name_button" maxWidth="1.7976931348623157E308" onMouseClicked="#OnNameClicked" text="Amirhossein Mahmoudikkkkkkkkk" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <JFXButton fx:id="forward_button" graphicTextGap="5.0" minWidth="30.0" onAction="#OnForwardButtonAction" ripplerFill="ORANGE" text="Forward">
+                           <padding>
+                              <Insets left="-1.0" right="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="forwarded_button" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#OnForwardedClick" text="Forwarded From Ara">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <AnchorPane fx:id="image_anchor" minHeight="-Infinity">
+                     <children>
+                        <ImageView fx:id="message_image" cache="true" fitHeight="220.0" fitWidth="350.4" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../post.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="message_text" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" text="kjljlkjlkjlkjlk" textOverrun="CLIP" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="message_time" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#OnUserInfoBarClicked" text="12:45" textAlignment="RIGHT" textFill="#494848">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" />
+                     </padding>
+                     <graphic>
+
+                     </graphic>
+                     <graphic>
+                        <FontAwesomeIcon fx:id="seen_icon" cache="true" glyphStyleClass="" iconName="EYE" stroke="#8f1515" strokeWidth="0.0" text="" />
+                     </graphic>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</StackPane>

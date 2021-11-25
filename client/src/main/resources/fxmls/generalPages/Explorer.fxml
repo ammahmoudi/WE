@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.ExplorerView">
+   <content>
+      <AnchorPane maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <StackPane layoutX="250.0" layoutY="14.0" maxHeight="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTabPane fx:id="tab_pane" rotateGraphic="true" side="LEFT" styleClass="jfx-tab-pane" stylesheets="@../../style.css" tabClosingPolicy="UNAVAILABLE" tabMinHeight="40.0" StackPane.alignment="CENTER">
+                     <tabs>
+                        <Tab fx:id="posts_tab" text="Top Posts">
+                           <content>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                 <content>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;">
+                                       <children>
+                                       </children>
+                                    </StackPane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="STAR" rotate="90.0" selectionEnd="0" size="1.5em" />
+                           </graphic>
+                        </Tab>
+                        <Tab fx:id="search_tab" text="Search">
+                           <content>
+                              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane fx:id="search_borderpane" layoutX="235.0" layoutY="-8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <top>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #DD571A;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <FontAwesomeIcon fill="WHITE" iconName="SEARCH" size="2em" textAlignment="CENTER" />
+                                                <JFXTextField fx:id="search_text" focusColor="WHITE" promptText="Search" styleClass="jfx-text-field" stylesheets="@../../style.css" unFocusColor="#dad3d3" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </JFXTextField>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </top>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" iconName="SEARCH" rotate="90.0" selectionEnd="0" size="1.5em" />
+                           </graphic>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

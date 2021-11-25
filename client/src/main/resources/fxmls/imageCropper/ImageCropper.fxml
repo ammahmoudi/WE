@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderpane" maxHeight="1.7976931348623157E308" maxWidth="700.0" prefHeight="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.imageCropper.ImageCropperDialogView">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <top>
+      <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="50.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <HBox layoutX="136.0" layoutY="-25.0" maxWidth="1.7976931348623157E308" prefHeight="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="title_label" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="50.0" text="Crop Image" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="close_button" alignment="CENTER" cache="true" cancelButton="true" contentDisplay="GRAPHIC_ONLY" onAction="#OnCloseButtonAction" prefHeight="50.0" prefWidth="68.0" text="Add Photo" textAlignment="RIGHT" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOSE" size="2.5em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="crop_button" onAction="#OnCropButtonAction" prefHeight="47.0" prefWidth="90.0" style="-fx-background-color: #0cad48;" text="Crop" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

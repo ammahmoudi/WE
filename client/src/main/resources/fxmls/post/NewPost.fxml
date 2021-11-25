@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="298.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.post.NewPostView">
+   <center>
+      <JFXTextArea fx:id="post_text_input" prefHeight="208.0" prefWidth="630.0" promptText="Enter your New Post text" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </JFXTextArea>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="post_button" onAction="#OnPostButtonAction" prefHeight="47.0" prefWidth="90.0" style="-fx-background-color: #0cad48;" text="Post" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <right>
+      <JFXButton fx:id="add_photo_button" contentDisplay="TOP" onAction="#OnAddPhotoButton" prefHeight="134.0" prefWidth="213.0" style="-fx-background-color: #fc9c0c;" text="Add Photo" textFill="WHITE" BorderPane.alignment="CENTER">
+         <graphic>
+            <FontAwesomeIcon fx:id="add_photo_icon" fill="WHITE" iconName="IMAGE" size="2.5em" text="" />
+         </graphic>
+      </JFXButton>
+   </right>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="136.0" layoutY="-25.0" prefHeight="50.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="660.0" text="New Post">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="close_button" alignment="CENTER" cache="true" cancelButton="true" contentDisplay="GRAPHIC_ONLY" onAction="#OnCloseButtonAction" prefHeight="50.0" prefWidth="68.0" text="Add Photo" textAlignment="RIGHT" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIcon iconName="CLOSE" size="2.5em" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

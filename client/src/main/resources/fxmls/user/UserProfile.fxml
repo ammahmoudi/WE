@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import de.jensd.fx.glyphs.testapps.GlyphsBrowser?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.user.UserProfileView">
+   <content>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="700.0">
+         <children>
+            <BorderPane layoutX="196.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <AnchorPane maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane layoutX="250.0" layoutY="14.0" maxHeight="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXTabPane fx:id="tab_pane" style="-fx-background-color: blue;" tabClosingPolicy="UNAVAILABLE" StackPane.alignment="CENTER">
+                                 <tabs>
+                                    <Tab fx:id="posts_tab" text="Posts">
+                                       <content>
+                                          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <GlyphsBrowser layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="14.0" />
+                                             </children></AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="followings_tab" text="345 Followings">
+                                       <content>
+                                          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="followers_tab" text="786 Followers" />
+                                 </tabs>
+                              </JFXTabPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <top>
+                  <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="170.0">
+                           <children>
+                              <Circle fx:id="avatar_circle" fill="DODGERBLUE" layoutX="60.0" layoutY="65.0" onMouseClicked="#OnAvatarCircleClicked" radius="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <JFXBadge fx:id="silented_badge" alignment="TOP_CENTER" style="-fx-background-color: #6e0202; -fx-background-radius: 20;" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <children>
+                                    <Label contentDisplay="GRAPHIC_ONLY" graphicTextGap="20.0" text="Label">
+                                       <graphic>
+                                          <FontAwesomeIcon cache="true" fill="WHITE" iconName="BELL_SLASH" selectionEnd="0" size="1.5em" />
+                                       </graphic>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </JFXBadge>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" right="5.0" top="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="139.0" prefWidth="359.0">
+                           <children>
+                              <Label fx:id="user_real_name_label" contentDisplay="RIGHT" prefHeight="32.0" prefWidth="371.0" text="Amirhossein Mahmoudi">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <graphic>
+                                    <JFXButton fx:id="more_options_button" alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" onAction="#OnMoreOptionsButtonAction">
+                                       <graphic>
+                                          <FontAwesomeIcon glyphStyleClass="" iconName="ELLIPSIS_V" size="1.2em" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="username_label" prefHeight="20.0" prefWidth="310.0" text="am.mahmoudi">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon cache="true" iconName="AT" selectionEnd="0" />
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="last_seen_label" prefHeight="17.0" prefWidth="323.0" text="last seen ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <Label text="🕓">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="bio_label" prefHeight="17.0" prefWidth="341.0" text="it's all about the motion of the ocean">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="buttons_vbox" alignment="CENTER_LEFT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXButton fx:id="follow_button" onAction="#OnFollowButtonAction" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../style.css" text="Follow" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="default-color" />
+                                    <String fx:value="rounded_button" />
+                                 </styleClass>
+                              </JFXButton>
+                              <JFXButton fx:id="message_Button" contentDisplay="RIGHT" onAction="#OnMessageButtonAction" prefHeight="50.0" prefWidth="200.0" stylesheets="@../../style.css" text="message" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon cache="true" fill="WHITE" iconName="SEND_ALT" selectionEnd="0" size="1.2em" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="light_green" />
+                                    <String fx:value="rounded_button" />
+                                 </styleClass>
+                              </JFXButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+            <AnchorPane layoutX="-498.0" layoutY="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.SideMenuView">
+   <content>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="300.0">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" styleClass="chat_background" stylesheets="@../../style.css">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Circle fx:id="avatar_circle" fill="DODGERBLUE" onMouseClicked="#OnAvatarCircleClicked" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                           </children>
+                        </StackPane>
+                        <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="139.0" prefWidth="359.0">
+                           <children>
+                              <Label fx:id="user_real_name_label" contentDisplay="RIGHT" prefHeight="32.0" prefWidth="371.0" text="Amirhossein Mahmoudi">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username_label" prefHeight="20.0" prefWidth="310.0" text="am.mahmoudi">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon cache="true" iconName="AT" selectionEnd="0" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </StackPane>
+            <JFXButton fx:id="feed_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnFeedButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="Feeds" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon iconName="HOME" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="new_post_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnNewPostButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="New Post" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon iconName="PLUS_SQUARE_ALT" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="new_group_button" accessibleText="messaging" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="160.0" onAction="#OnNewGroupButtonAction" prefHeight="70.0" prefWidth="300.0" ripplerFill="#c54b4b" text="New Group" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon accessibleText="messaging" iconName="GROUP" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="categories_button" accessibleText="messaging" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="210.0" onAction="#OnCategoriesButtonAction" prefHeight="70.0" prefWidth="300.0" ripplerFill="#c54b4b" text="Categories" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon accessibleText="messaging" iconName="LIST" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="activity_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnActivityButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="Activity" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon iconName="HEART_ALT" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="explorer_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnExplorerButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="Explorer" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon iconName="SEARCH" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="saved_messages_button" accessibleText="saved_messages" alignment="BASELINE_LEFT" graphicTextGap="28.0" layoutX="10.0" layoutY="230.0" onAction="#OnSavedMessagesButtonAction" prefHeight="70.0" prefWidth="300.0" ripplerFill="#c54b4b" text="Saved Messages" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon accessibleText="messaging" iconName="BOOKMARK" size="2em" textAlignment="RIGHT" textOrigin="CENTER" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="14.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="my_profile_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnMyProfileButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="My Profile" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon iconName="USER" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="setting_button" accessibleText="settings" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="160.0" onAction="#OnSettingButtonAction" prefHeight="70.0" prefWidth="300.0" ripplerFill="#c54b4b" text="Settings" wrapText="true">
+               <graphic>
+                  <FontAwesomeIcon accessibleText="messaging" iconName="GEAR" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="sign_out_button" accessibleText="sign_out" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="370.0" onAction="#OnSignOutButtonAction" prefHeight="70.0" prefWidth="300.0" ripplerFill="#c54b4b" text="Sign Out" wrapText="true">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon accessibleText="messaging" iconName="POWER_OFF" selectionEnd="0" size="2em" wrappingWidth="12.800048828125" />
+               </graphic>
+            </JFXButton>
+
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

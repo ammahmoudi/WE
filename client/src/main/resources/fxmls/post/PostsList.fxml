@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.post.PostsListView">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <AnchorPane minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="reload_button" graphicTextGap="8.0" onAction="#OnReloadButtonAction" style="-fx-background-radius: 0;" styleClass="default-button" stylesheets="@../../style.css" text="Reload" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <FontAwesomeIcon fx:id="reload_button_icon" fill="WHITE" iconName="REPEAT" size="1.5em" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="scrollpane" fitToWidth="true" hbarPolicy="NEVER" minHeight="600.0" minWidth="-Infinity" prefHeight="700.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <JFXMasonryPane fx:id="posts_masonery" cellHeight="260.0" cellWidth="350.0" limitColumn="100" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

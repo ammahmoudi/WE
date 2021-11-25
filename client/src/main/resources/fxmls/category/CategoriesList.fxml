@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stackpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.category.CategoriesListView">
+   <children>
+      <ScrollPane fx:id="scrollpane" fitToWidth="true" hbarPolicy="NEVER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" StackPane.alignment="CENTER">
+         <content>
+            <JFXMasonryPane fx:id="categories_masonery" cellHeight="213.0" cellWidth="170.0" limitColumn="100" />
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.NothingPageView">
+   <children>
+      <Label fx:id="text" contentDisplay="TOP" text="Label" textFill="#e7930c">
+         <graphic>
+            <FontAwesomeIcon fx:id="icon" fill="#e7930c" glyphStyleClass="" iconName="BOOK" selectionEnd="0" selectionStart="0" size="4em" />
+         </graphic>
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
+</StackPane>

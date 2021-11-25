@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.SocialMenuView">
+   <children>
+      <JFXButton fx:id="Feed_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="80.0" maxWidth="1.7976931348623157E308" onAction="#OnFeedButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="Feeds" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon iconName="HOME" size="2em" wrappingWidth="12.800048828125" />
+         </graphic>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="explorer_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="150.0" maxWidth="1.7976931348623157E308" onAction="#OnExplorerButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="Explorer" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon iconName="SEARCH" size="2em" wrappingWidth="12.800048828125" />
+         </graphic>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="new_post_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnNewPostButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="New Post" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon iconName="PLUS_SQUARE_ALT" size="2em" wrappingWidth="12.800048828125" />
+         </graphic>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="activity_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" maxWidth="1.7976931348623157E308" onAction="#OnActivityButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="Activity" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon iconName="HEART_ALT" size="2em" wrappingWidth="12.800048828125" />
+         </graphic>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="my_profile_button" alignment="BASELINE_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="220.0" maxWidth="1.7976931348623157E308" onAction="#OnMyProfileButtonAction" prefHeight="70.0" ripplerFill="#c54b4b" text="My Profile" wrapText="true">
+         <graphic>
+            <FontAwesomeIcon iconName="USER" size="2em" wrappingWidth="12.800048828125" />
+         </graphic>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

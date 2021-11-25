@@ -1,0 +1,132 @@
+.all_comments_button:hover, .all_likes_button:hover {
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0.0, 0.0)
+}
+
+.MessagingEnvironmentItem:hover {
+    -fx-text-fill: black;
+    -fx-background-color: #d9d9d9;
+}
+
+.jfx-tab-pane {
+    /*-fx-padding: 1px;*/
+    /*-fx-background-color: blue, -fx-control-inner-background;*/
+    /*-fx-background-insets: 0, 1;*/
+}
+
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #dd571a;
+}
+
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #DD571A;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler {
+    -jfx-rippler-fill: orange;
+}
+
+.jfx-tab-pane .tab-header-area .tab-selected-line {
+    -fx-stroke: white;
+}
+
+.jfx-text-field-white {
+    -fx-prompt-text-fill: WHITE;
+    -jfx-focus-color: WHITE;
+    -jfx-unfocus-color: WHITE;
+}
+
+.col {
+    -fx-background-color: #DD571A;
+}
+
+.default-color {
+    -fx-background-color: #DD571A;
+    -fx-text-fill: white;
+
+}
+.no_border{
+    -fx-border-radius: 0;
+    -fx-border-color: transparent;
+}
+.button_border{
+    -fx-border-radius: 45px;
+
+}
+.black_border{
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+.default_border{
+    -fx-border-color:#DD571A ;
+    -fx-border-width: 1px;
+}
+
+.border{
+    -fx-border-color: #060908;
+    -fx-border-width: 1px;
+}
+.light_green {
+    -fx-background-color:  #24bf8b;
+    -fx-text-fill: white;
+
+}
+.green{
+    -fx-background-color:   #0cad48;
+    -fx-text-fill: white;
+}
+.dark{
+    -fx-background-color: #060908;
+    -fx-text-fill: white;
+}
+.no_color{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+.default-button:hover {
+
+    -fx-background-color: #DD571A;
+
+}
+.rounded_button{
+    -fx-background-radius: 45px;
+    -fx-border-radius: 45px;
+}
+.rounded_box{
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+.unrounded{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+.default-text {
+    -fx-text-fill: #DD571A;
+}
+
+.jfx-text-field_colored, .jfx-password-field_colored {
+    -fx-prompt-text-fill: black;
+    -jfx-focus-color: #DD571A;
+    -jfx-unfocus-color: black;
+}
+
+.jfx-hamburger {
+}
+.jfx-dialog-overlay-pane > StackPane{
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+
+
+}
+.jfx-hamburger StackPane {
+    -fx-background-color: white;
+}
+
+.root {
+    -fx-focus-color: transparent;
+}
+
+.chat_background {
+
+    -fx-background-color: linear-gradient(to bottom, #ff6600, #00c2ff);
+}

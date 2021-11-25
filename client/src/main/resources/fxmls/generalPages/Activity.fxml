@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scrollpane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.generalPages.ActivityView">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox layoutX="190.0" prefHeight="200.0" prefWidth="700.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="requests_button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#OnRequestsButtonAction" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <HBox fx:id="hbox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="300.0">
+                                 <children>
+                                    <AnchorPane prefHeight="80.0" prefWidth="80.0">
+                                       <children>
+                                          <Circle fx:id="requests_circle" fill="DODGERBLUE" onMouseClicked="#OnAvatarCircleClicked" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                          <JFXBadge fx:id="request_badge" layoutX="33.0" layoutY="5.0" prefHeight="18.0" prefWidth="30.0" style="-fx-background-color: red; -fx-background-radius: 100;" text="" AnchorPane.rightAnchor="10.0">
+                                             <children>
+                                                <Label fx:id="requests_number_label" contentDisplay="TEXT_ONLY" minHeight="-Infinity" minWidth="-Infinity" text="67" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                                             </padding>
+                                             <effect>
+                                                <DropShadow blurType="TWO_PASS_BOX" color="#5e5e5ec4" height="10.0" offsetX="2.0" offsetY="3.0" radius="4.5" spread="0.39" width="10.0" />
+                                             </effect>
+                                          </JFXBadge>
+                                       </children>
+                                    </AnchorPane>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="50.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Follow Requests">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Approve or ignore requests" textFill="#5e5e5e">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="sent_requests_button" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#OnSentRequestsButtonAction" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <HBox fx:id="hbox1" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="300.0">
+                                 <children>
+                                    <AnchorPane prefHeight="80.0" prefWidth="80.0">
+                                       <children>
+                                          <Circle fx:id="sent_requests_circle" fill="DODGERBLUE" onMouseClicked="#OnAvatarCircleClicked" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                                          <JFXBadge fx:id="sent_request_badge" layoutX="33.0" layoutY="5.0" prefHeight="18.0" prefWidth="30.0" style="-fx-background-color: red; -fx-background-radius: 100;" text="" AnchorPane.rightAnchor="10.0">
+                                             <children>
+                                                <Label fx:id="sent_requests_number_label" contentDisplay="TEXT_ONLY" minHeight="-Infinity" minWidth="-Infinity" text="67" textAlignment="CENTER" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+                                             </padding>
+                                             <effect>
+                                                <DropShadow blurType="TWO_PASS_BOX" color="#5e5e5ec4" height="10.0" offsetX="2.0" offsetY="3.0" radius="4.5" spread="0.39" width="10.0" />
+                                             </effect>
+                                          </JFXBadge>
+                                       </children>
+                                    </AnchorPane>
+                                    <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="50.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Sent Requests">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Manage and Delete sent requests" textFill="#5e5e5e">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="notifications_vbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="700.0" spacing="5.0" VBox.vgrow="ALWAYS" />
+               </children></VBox>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
