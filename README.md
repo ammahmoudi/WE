@@ -1,7 +1,10 @@
 # WE
 A social app for posting and messaging  using Java, JavaFX, hibernate ORM
+
 This app is not optimized but presents  a friendly and beautiful UI and a variety of features.
+
 Final Project for Advanced programming course.Supervised by Mojtaba Ostovari.
+
 ## Libraries
 - Javafx
 - Jfoniex
